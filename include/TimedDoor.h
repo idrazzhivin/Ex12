@@ -4,7 +4,8 @@
 
 #include <string>
 #include <ctime>
-#include <unistd.h>
+#include <chrono>
+#include <thread>
 
 class Door {
  public:
