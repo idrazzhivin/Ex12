@@ -4,8 +4,6 @@
 
 #include <string>
 #include <ctime>
-#include <chrono>
-#include <thread>
 
 class Door {
  public:
@@ -47,6 +45,6 @@ class DoorTimeAdapter : public TimerClient {
 class Timer {
  public:
     void registerTimer(const DoorTimeAdapter & _dtAdapter, unsigned int _sec);
-    void sleep(unsigned int _sec);
+    void sleepTimer(unsigned int _sec);
 };
 #endif  // INCLUDE_TIMEDDOOR_H_
