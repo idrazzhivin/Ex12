@@ -41,7 +41,7 @@ void DoorTimeAdapter::Timeout() const {
   tDoor.DoorTimeOut();
 }
 
-void Timer::registerTimer(DoorTimeAdapter const & _dtAdapter,
+void Timer::registerTimer(const DoorTimeAdapter & _dtAdapter,
                           unsigned int _sec) {
   sleep(_sec);
   _dtAdapter.Timeout();
