@@ -5,7 +5,7 @@
 
 int main() {
   TimedDoor timedDoor(5);  // create the door&tmr
-  TimedDoor* timedDoor1 = new TimedDoor(5);  // same
+  TimedDoor* timedDoor1 = new TimedDoor(5)  // same
   try {
     timedDoor.unlock();
   } catch (std::string notice) {

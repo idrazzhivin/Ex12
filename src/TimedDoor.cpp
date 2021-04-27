@@ -33,7 +33,7 @@ void TimedDoor::DoorTimeOut() const {
   throw std::string("close the door!");
 }
 
-DoorTimeAdapter::DoorTimeAdapter(TimedDoor& _tDoor)
+DoorTimeAdapter::DoorTimeAdapter(const TimedDoor& _tDoor)
   : tDoor(_tDoor) {
 }
 

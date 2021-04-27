@@ -38,9 +38,9 @@ class TimerClient {
 
 class DoorTimeAdapter : public TimerClient {
  private:
-    TimedDoor& tDoor;
+    const TimedDoor& tDoor;
  public:
-    explicit DoorTimeAdapter(TimedDoor& _tDoor);
+    explicit DoorTimeAdapter(const TimedDoor& _tDoor);
     void Timeout() const override;
 };
 
