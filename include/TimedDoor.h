@@ -29,7 +29,6 @@ class TimedDoor : public Door {
     void lock() override;
     void unlock() override;
     void DoorTimeOut() const;
-    unsigned int getSec() const;
 };
 
 class TimerClient {
