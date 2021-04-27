@@ -1,5 +1,4 @@
 // Copyright 2021 Ivan Razzhivin
-
 #include "TimedDoor.h"
 #include <iostream>
 
@@ -30,7 +29,7 @@ void TimedDoor::throwState() {
   }
 }
 
-void TimedDoor::DoorTimeOut() {
+void TimedDoor::DoorTimeOut() const {
   throw std::string("close the door!");
 }
 
@@ -38,11 +37,11 @@ DoorTimeAdapter::DoorTimeAdapter(TimedDoor& _tDoor)
   : tDoor(_tDoor) {
 }
 
-void DoorTimeAdapter::Timeout() {
+void DoorTimeAdapter::Timeout() const {
   tDoor.DoorTimeOut();
 }
 
-void Timer::registerTimer(DoorTimeAdapter& _dtAdapter,
+void Timer::registerTimer(DoorTimeAdapter const & _dtAdapter,
                           unsigned int _sec) {
   sleep(_sec);
   _dtAdapter.Timeout();
