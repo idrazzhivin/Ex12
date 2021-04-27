@@ -43,11 +43,12 @@ void DoorTimeAdapter::Timeout() const {
 
 void Timer::registerTimer(const DoorTimeAdapter & _dtAdapter,
                           unsigned int _sec) {
-  sleep(_sec);
+  sleepTimer(_sec);
   _dtAdapter.Timeout();
 }
 
-void Timer::sleep(unsigned int _sec) {
-  std::this_thread::sleep_for(std::chrono::seconds(_sec));
-}
+void Timer::sleepTimer(unsigned int _sec) {
+  time_t begin = time(nullptr);
+  while (time(nullptr) - begin - _sec) {
+  }
 }
