@@ -4,12 +4,12 @@
 #include "TimedDoor.h"
 
 int main() {
-  TimedDoor* timedDoor1 = new TimedDoor(5);  // same
+  TimedDoor* timedDoor1 = new TimedDoor(5);  // make door with timer
   try {
     timedDoor.unlock();
     timedDoor1->throwState();
   } catch (std::string notice1) {
-    std::cout << notice1 << std::endl;  // open
+    std::cout << notice1 << std::endl;  // opened
   }
   TimedDoor* timedDoor2 = new TimedDoor(5);
   try {
@@ -22,7 +22,7 @@ int main() {
     timedDoor3->lock();
     timedDoor3->throwState();
   } catch (std::string notice3) {
-    std::cout << notice3 << std::endl;  // close
+    std::cout << notice3 << std::endl;  // closed
   }
   return 0;
 }
