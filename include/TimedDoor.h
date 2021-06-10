@@ -47,4 +47,5 @@ class Timer {
     void registerTimer(const DoorTimeAdapter & _dtAdapter, unsigned int _sec);
     void sleepTimer(unsigned int _sec);
 };
+
 #endif  // INCLUDE_TIMEDDOOR_H_
