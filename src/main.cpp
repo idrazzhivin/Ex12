@@ -7,10 +7,9 @@ int main() {
   TimedDoor* timedDoor1 = new TimedDoor(5);  // same
   try {
     timedDoor.unlock();
+    timedDoor1->throwState();
   } catch (std::string notice) {
     std::cout << notice << std::endl;  // close
-    timedDoor1->unlock();
-    timedDoor1->throwState();
   } catch (std::string notice1) {
     std::cout << notice1 << std::endl;  // open
   }
